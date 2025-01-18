@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <!--
+        Name: Module 1 Exercise
+        Author: Frank E. Ciszek
+        Class: CIT-215 Client-Side Script and JavaScript 
+        Date: 1/17/2025
+        Purpose: Demonstrate proficiency with basic JavaScript
+    -->
+<html>
+    <head>
+        <script>
+            function answer1() {
+                document.getElementById("answer1").innerHTML=" \
+                JavaScript was created in 1995 as a language to allow \
+                non programmers to create interactive web sites. It was \
+                created as a collaboration between Netscape Navigator, \
+                Sun Microsystems, and Brendan Eich. Orginally Netscape \
+                hoped to embed Java and Scheme into Netscape Navigator \
+                but they quickly realized that it was best to implement \
+                a new programming language. In 1996 Netscape began to \
+                standardize the JavaScript language when they submitted \
+                it to Ecma International. The first ECMAScript was \
+                released in 1997.";
+            } 
+        </script>
+        <script src="Module1.js"></script>
+        <script src="http://cit.wvncc.edu/cit215/answerConfirm.js"></script>
+        <title>Module 1 Exercise</title>
+    </head>
+    <body>
+        <main>
+            <section>
+                <h2>1. Describe the origins of JavaScript</h2>
+                <button type="button" onclick="answer1()">Click to Reveal Answer</button>
+                <p id="answer1"></p>
+            </section>
+
+            <section>
+                <h2>2. Describe some of the unique properties of JavaScript</h2>
+                <button type="button" onclick="answer2()">Click to Reveal Answer</button>
+                <p id="answer2"></p>
+            </section>
+
+            <section>
+                <h2>3. Describe some major libraries or projects written in JavaScript</h2>
+                <button type="button" onclick="answer3()">Click to Reveal Answer</button>
+                <p id="answer3"></p>
+            </section>
+
+            <section>
+                <h2>4. Click here to show that external JavaScript file references work</h2>
+                <button type="button" onclick="answerConfirm()">Click to Reveal Answer</button>
+                <p id="answerConfirm"></p>
+            </section>
+        </main>
+    </body>
+</html>
