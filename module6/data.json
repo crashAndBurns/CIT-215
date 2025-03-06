@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Caius Cassius",
+        "race": "Tiefling",
+        "class": "Rogue/Paladin",
+        "experience": 800000,
+        "level": 15,
+        "campaign": "Casus Terra"
+    },
+
+    {
+        "name": "Tyrus Cassius",
+        "race": "Human",
+        "class": "Rogue",
+        "experience": 675000,
+        "level": 10,
+        "campaign":"Casus Terra"
+    },
+
+    {
+        "name": "Krassus",
+        "race": "Half-Orc",
+        "class": "Fighter/Barbarian",
+        "experience": 1000000,
+        "level": 17,
+        "campaign": "Hand of Vecna"
+    },
+
+    {
+        "name": "Vladislav Kestrel",
+        "race": "Wood ELf",
+        "Class": "Rogue",
+        "Experience": 100000,
+        "level": 4,
+        "campaign": "Saltmarsh"
+    }
+]

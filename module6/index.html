@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Module 6 Lab</title>
+        <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+				<link href="lab.css" rel="stylesheet">
+    </head>
+    <script>
+        // write your JS function here
+        // it will make an AJAX request for http://localhost:8080/data.json
+        // 1. Make a fetch request for the data.json file
+        let url = "http://localhost:8080/data.json";
+        fetch(url) // returns a web response from the url
+            // then gets the returned response as text
+            .then(response => response.text())
+            // then parses the returned text response as JSON
+            .then(text => JSON.parse(text))
+            // Runs a function that accumulates the HTML string
+            .then(accumulate);
+
+            // Accumulate function takes an array as a parameter and
+            // generates html table of the JSON data.
+            function accumulate(array) {
+                let htmlString = "";
+                htmlString += "<table>";
+                
+                // This command gets the keys from the first object and places them
+                // in an array I then  use the array to set the headings for the 
+                // html table. A downside to this method is that if the keys change
+                // in later items those changes will be omitted from the array used
+                // to set up the headings. As long as each object has the SAME headings
+                // it should work.
+                const keys = Object.keys(array[0]);
+                htmlString += "<tr>";
+                    for (let i in array[0]) {
+                        htmlString += "<th>" + i + "</th>";
+                    }
+                htmlString += "</tr>";
+
+                // for (let i = 0; i < array.length; i++) {
+                //     // console.log(array[i].name)
+                //     for(let key of keys) {}
+                //     htmlString += "<tr>"
+                //     htmlString += "<td>" + array[i].name + "</td>";
+                //     htmlString += "<td>" + array[i].race + "</td>";
+                //     htmlString += "<td>" + array[i].class + "</td>";
+                //     htmlString += "<td>" + array[i].experience + "</td>";
+                //     htmlString += "<td>" + array[i].level + "</td>";
+                //     htmlString += "<td>" + array[i].campaign + "</td>";
+                //     htmlString += "</tr>";
+                // }
+
+                // Begin the accumulator pattern used to build the HTML string
+                for (let i = 0; i < array.length; i++) {
+                    htmlString += "<tr>";
+                    for (let j = 0; j < keys.length; j++) {
+                        htmlString += "<td>" + array[i][keys[j]] + "</td>";
+                    }
+                    htmlString += "</tr>";
+                }
+
+                htmlString += "</table>";
+                
+                // Set the inner html of the "results" section to the HTML string.
+                let node = document.getElementById("results").innerHTML=htmlString;
+            }
+
+    </script>
+    <body>
+        <header>
+
+            <div class="center">
+                <h1>CIT 215 - JavaScript</h1>
+                <h2>Module 6 Lab</h2>
+            </div>
+
+        </header>
+        <main>
+            <h3>
+                Display your table of objects below.
+            </h3>
+            <!-- Create your button here -->
+            <section id="results">
+
+            </section>
+        </main>
+    </body>
+</html>

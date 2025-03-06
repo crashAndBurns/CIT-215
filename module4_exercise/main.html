@@ -1,0 +1,55 @@
+<!--
+    Name: Javascript Functions and Best Practices
+    Author: Frank E. Ciszek
+    Date: 2/7/2025
+    Purpose: Write an html document that uses JavaScript functions to 
+    help describe best practices.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Functions and Best Practices</title>
+    </head>
+    <body>
+        <dl>
+            <dt id="coding practices" onmouseover="codingMouseover()">List Three JavaScript coding Best Practices</dt>
+                <dd id="coding dd 1"></dd>
+                <dd id="coding dd 2"></dd>
+                <dd id="coding dd 3"></dd>
+            <dt id="style practices" onmouseover="styleMouseover()">List Three JavaScript style Best Practices</dt>
+                <dd id="style dd 1"></dd>
+                <dd id="style dd 2"></dd>
+                <dd id="style dd 3"></dd>
+            <dt id="performance practices" onmouseover="performanceMouseover()">List Three JavaScript performance Best Practices</dt>
+                <dd id="performance dd 1"></dd>
+                <dd id="performance dd 2"></dd>
+                <dd id="performance dd 3"></dd>
+        </dl>
+        
+    </body>
+    <foot>
+        <script>
+            function codingMouseover() {
+              document.getElementById("coding dd 1").innerHTML="Avoid using global variables.";
+              document.getElementById("coding dd 2").innerHTML="Declare variables at the top of each script or function."; 
+              document.getElementById("coding dd 3").innerHTML="Always initialize variables after they are declared.";
+            }
+
+            let styleMouseover = () => {
+              document.getElementById("style dd 1").innerHTML="End statements with a semicolon.";
+              document.getElementById("style dd 2").innerHTML="Indent with two spaces on each new line.";
+              document.getElementById("style dd 3").innerHTML="Use camelCase for variable names";
+            }
+
+            performanceMouseover = () => displayPerformanceDD()
+
+            function displayPerformanceDD() {
+              document.getElementById("performance dd 1").innerHTML="Reduce activity in loops.";
+              document.getElementById("performance dd 2").innerHTML="Load scripts at the bottom of the page.";
+              document.getElementById("performance dd 3").innerHTML="Don't create unnecessary variables.";
+            }
+        </script>
+    </foot>    
+</html>
